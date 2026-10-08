@@ -1,0 +1,7 @@
+{
+  "name": "SVS Bible",
+  "description": "Accurate Scripture. Beautiful Reading. Simple Faith. A production-quality Progressive Web App for English and Tamil Bible reading and study.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

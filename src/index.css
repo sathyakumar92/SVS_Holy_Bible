@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #121316;
+    --bg-secondary: #1a1c22;
+    --bg-tertiary: #232630;
+    --border-subtle: #2b2e3a;
+    --text-primary: #ede8df;
+    --text-secondary: #a9a397;
+    --text-muted: #736e65;
+    --gold-primary: #d4af37;
+    --gold-secondary: #c5a059;
+    --gold-muted: rgba(212, 175, 55, 0.15);
+  }
+
+  .theme-light {
+    --bg-primary: #fcfbf9;
+    --bg-secondary: #f4efe6;
+    --bg-tertiary: #e9e3d5;
+    --border-subtle: #ded6c5;
+    --text-primary: #1e2022;
+    --text-secondary: #565551;
+    --text-muted: #8b8880;
+    --gold-primary: #9b7921;
+    --gold-secondary: #8c6a15;
+    --gold-muted: rgba(155, 121, 33, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Font styling for Tamil */
+  .font-tamil {
+    font-family: 'Noto Sans Tamil', 'Mukta Malar', 'Noto Serif Tamil', sans-serif;
+    letter-spacing: 0.015em;
+  }
+
+  .font-tamil-serif {
+    font-family: 'Noto Serif Tamil', 'Mukta Malar', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+  }
+
+  .font-serif-reading {
+    font-family: 'Merriweather', Georgia, Cambria, serif;
+  }
+}
+
+/* =========================================================
+   LIGHT THEME STYLING OVERRIDES
+   ========================================================= */
+.theme-light,
+.theme-light body,
+.theme-light #root {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-light [class*="bg-[#121316]"],
+.theme-light [class*="bg-[#101114]"],
+.theme-light [class*="bg-[#131418]"] {
+  background-color: var(--bg-primary) !important;
+}
+
+.theme-light [class*="bg-[#16181F]"],
+.theme-light [class*="bg-[#181A22]"],
+.theme-light [class*="bg-[#1A1C22]"],
+.theme-light [class*="bg-[#1A1C24]"],
+.theme-light [class*="bg-[#14161C]"],
+.theme-light [class*="bg-[#1B1D25]"],
+.theme-light [class*="bg-[#1F222C]"],
+.theme-light [class*="bg-[#1B1E28]"] {
+  background-color: var(--bg-secondary) !important;
+}
+
+.theme-light [class*="bg-[#232630]"],
+.theme-light [class*="bg-[#252835]"],
+.theme-light [class*="bg-[#292D3B]"],
+.theme-light [class*="bg-[#1C1F28]"],
+.theme-light [class*="bg-[#222634]"],
+.theme-light [class*="bg-[#282C3A]"] {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.theme-light [class*="hover:bg-[#1B1E27]"]:hover,
+.theme-light [class*="hover:bg-[#1C1F28]"]:hover,
+.theme-light [class*="hover:bg-[#20232E]"]:hover,
+.theme-light [class*="hover:bg-[#252936]"]:hover,
+.theme-light [class*="hover:bg-[#2C3142]"]:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.theme-light [class*="text-[#EDE8DF]"],
+.theme-light [class*="text-[#EDE8DE]"],
+.theme-light [class*="text-[#E5E0D5]"],
+.theme-light [class*="text-[#F0ECE1]"],
+.theme-light [class*="text-white"],
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4 {
+  color: var(--text-primary) !important;
+}
+
+.theme-light [class*="text-[#A9A397]"],
+.theme-light [class*="text-[#8C877D]"],
+.theme-light [class*="text-[#736E65]"],
+.theme-light [class*="text-[#8B8880]"],
+.theme-light [class*="text-[#7C776E]"] {
+  color: var(--text-secondary) !important;
+}
+
+.theme-light [class*="border-[#242732]"],
+.theme-light [class*="border-[#252834]"],
+.theme-light [class*="border-[#272B38]"],
+.theme-light [class*="border-[#2B2E3A]"],
+.theme-light [class*="border-[#2B2F3D]"],
+.theme-light [class*="border-[#2E3340]"],
+.theme-light [class*="border-[#3A2F25]"],
+.theme-light [class*="border-[#20232D]"] {
+  border-color: var(--border-subtle) !important;
+}
+
+.theme-light input:not([type="checkbox"]):not([type="range"]),
+.theme-light select,
+.theme-light textarea {
+  background-color: #ffffff !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.theme-light .sticky {
+  background-color: rgba(252, 251, 249, 0.95) !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+/* Safe area insets for mobile devices */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
